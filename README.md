@@ -2,11 +2,30 @@
 
 Wrapper around the cld3 library. (WIP)
 
-1. Clone this repository
-2. Build Docker image `docker build . -t node-cld3`
-3. Run the tests `docker run --rm -it node-cld3`
+## Docker
 
-OR locally:
+1. Clone this repository
+
+### Docker node:20 (not working)
+
+- `docker build . -t node-cld3:node`
+- `docker run --rm -it node-cld3:node`
+
+`Error: /build/build/Release/cld3.node: undefined symbol: _ZNK6google8protobuf11MessageLite25InitializationErrorStringB5cxx11Ev`
+
+### Docker debian:bookworm (not working)
+
+- `docker build -f debian.Dockerfile . -t node-cld3:debian`
+- `docker run --rm -it node-cld3:debian`
+
+`Error: /build/build/Release/cld3.node: undefined symbol: _ZNK6google8protobuf11MessageLite25InitializationErrorStringB5cxx11Ev`
+
+### Docker manjarolinux/base:20230521 (working)
+
+- `docker build -f manjaro.Dockerfile . -t node-cld3:manjaro`
+- `docker run --rm -it node-cld3:manjaro`
+
+## Local
 
 1. Ensure you are using Node.js >= 18
 2. Install and compile `npm install`

@@ -2,6 +2,8 @@
 
 Wrapper around the cld3 library compiled with Clang.
 
+See Stackoverflow question here: https://stackoverflow.com/questions/76341132/undefined-c11-symbol-while-trying-to-create-a-node-js-binding-to-cld3
+
 ## Docker
 
 1. Clone this repository

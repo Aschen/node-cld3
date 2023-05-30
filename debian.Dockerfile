@@ -9,10 +9,15 @@ RUN apt-get update && apt-get install -y \
     protobuf-compiler \
     libprotobuf-dev \
     nodejs \
-    npm
+    npm \
+    clang
+
 
 WORKDIR /build
 COPY . .
+
+ENV CXX=/usr/bin/clang++
+ENV CC=/usr/bin/clang
 
 RUN npm install
 CMD ["npm", "run", "test"]

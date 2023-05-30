@@ -1,19 +1,19 @@
 # node-cld3
 
-Wrapper around the cld3 library. (WIP)
+Wrapper around the cld3 library compiled with Clang.
 
 ## Docker
 
 1. Clone this repository
 
-### Docker node:20 (not working)
+### Docker node:20 (working)
 
 - `docker build . -t node-cld3:node`
 - `docker run --rm -it node-cld3:node`
 
 `Error: /build/build/Release/cld3.node: undefined symbol: _ZNK6google8protobuf11MessageLite25InitializationErrorStringB5cxx11Ev`
 
-### Docker debian:bookworm (not working)
+### Docker debian:bookworm (working)
 
 - `docker build -f debian.Dockerfile . -t node-cld3:debian`
 - `docker run --rm -it node-cld3:debian`
